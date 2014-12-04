@@ -1,0 +1,9 @@
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.exe.config
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.csprojResolveAssemblyReference.cache
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.Form1.resources
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.Properties.Resources.resources
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.csproj.GenerateResource.Cache
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.exe
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.pdb
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.exe
+c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.pdb
