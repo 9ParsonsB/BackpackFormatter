@@ -7,3 +7,12 @@ c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamB
 c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.pdb
 c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.exe
 c:\users\minijackb\documents\visual studio 2013\Projects\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.pdb
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.exe.config
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.exe
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.pdb
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.exe
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.pdb
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.csprojResolveAssemblyReference.cache
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.Form1.resources
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.Properties.Resources.resources
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.csproj.GenerateResource.Cache
