@@ -16,3 +16,12 @@ C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\Tes
 C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.Form1.resources
 C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.Properties.Resources.resources
 C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.csproj.GenerateResource.Cache
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.exe.config
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.exe
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.pdb
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.exe
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Debug\TestSteamBot.pdb
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.csprojResolveAssemblyReference.cache
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.Form1.resources
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.Properties.Resources.resources
+E:\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Debug\TestSteamBot.csproj.GenerateResource.Cache

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnLoadtxt = new System.Windows.Forms.Button();
             this.lstItems = new System.Windows.Forms.ListView();
             this.txtKeyValue = new System.Windows.Forms.TextBox();
             this.lblkeyPrice = new System.Windows.Forms.Label();
-            this.lblDev = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnLoadtxt
@@ -58,7 +60,7 @@
             // 
             // txtKeyValue
             // 
-            this.txtKeyValue.Location = new System.Drawing.Point(219, 43);
+            this.txtKeyValue.Location = new System.Drawing.Point(186, 23);
             this.txtKeyValue.Name = "txtKeyValue";
             this.txtKeyValue.Size = new System.Drawing.Size(100, 20);
             this.txtKeyValue.TabIndex = 6;
@@ -68,20 +70,20 @@
             // lblkeyPrice
             // 
             this.lblkeyPrice.AutoSize = true;
-            this.lblkeyPrice.Location = new System.Drawing.Point(216, 27);
+            this.lblkeyPrice.Location = new System.Drawing.Point(183, 7);
             this.lblkeyPrice.Name = "lblkeyPrice";
             this.lblkeyPrice.Size = new System.Drawing.Size(92, 13);
             this.lblkeyPrice.TabIndex = 7;
             this.lblkeyPrice.Text = "Price of key in ref:";
             // 
-            // lblDev
+            // lblInfo
             // 
-            this.lblDev.AutoSize = true;
-            this.lblDev.Location = new System.Drawing.Point(326, 50);
-            this.lblDev.Name = "lblDev";
-            this.lblDev.Size = new System.Drawing.Size(51, 13);
-            this.lblDev.TabIndex = 8;
-            this.lblDev.Text = "Decimal: ";
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(183, 46);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(41, 13);
+            this.lblInfo.TabIndex = 8;
+            this.lblInfo.Text = "Ready.";
             // 
             // button1
             // 
@@ -93,17 +95,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 550);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblDev);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblkeyPrice);
             this.Controls.Add(this.txtKeyValue);
             this.Controls.Add(this.lstItems);
             this.Controls.Add(this.btnLoadtxt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "TF2 Backpack Formatter";
             this.ResumeLayout(false);
@@ -117,8 +127,9 @@
         private System.Windows.Forms.ListView lstItems;
         private System.Windows.Forms.TextBox txtKeyValue;
         private System.Windows.Forms.Label lblkeyPrice;
-        private System.Windows.Forms.Label lblDev;
+        private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
