@@ -96,7 +96,7 @@ namespace TestSteamBot
                         tempPrice = i.Substring(i.IndexOf("(") + 1);
                         tempCurrency = "ref";
 
-                        if (tempName.Contains("#26"))
+                        if (tempName.Contains("Summer"))
                             Console.WriteLine();
 
                         if (tempPrice.Contains("$"))
@@ -157,7 +157,7 @@ namespace TestSteamBot
 
                         /*if (tempPrice.Contains("r"))
                             tempPrice = tempPrice.Substring(0, tempPrice.IndexOf("r")-1);//*/
-                        if (!(tempPrice.Contains("r")) && !(tempCurrency == "ref"))
+                        if (!(tempPrice.Contains("r")) && (tempCurrency == "ref"))
                             tempPrice += " ref";
 
                         if (tempCurrency == "$")
@@ -193,7 +193,7 @@ namespace TestSteamBot
             saveFile = new SaveFileDialog(); // create saveFileDialog instance
             toSave = new List<string>(); // list of lines to save to file
 
-            saveFile.FileName = "Vending Order.txt"; // defualt file name
+            saveFile.FileName = "Output.txt"; // defualt file name
             saveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"; // filter for save file dialog
 
             if (saveFile.ShowDialog() == DialogResult.OK) // prompt user for save location, if they press OK then
