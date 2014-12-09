@@ -20,15 +20,23 @@ namespace TestSteamBot
         string tempPrice;
         string tempName;
         string tempCurrency;
+        string tempFrom;
+
         OpenFileDialog openFile = new OpenFileDialog();
         SaveFileDialog saveFile = new SaveFileDialog();
+
         Regex loadNameExp;
         Match match;
+
         List<string> toLoad = new List<string>();
         List<string> toSave = new List<string>();
         List<TFItem> Items = new List<TFItem>();
+
         private readonly BackgroundWorker worker = new BackgroundWorker();
+
         decimal KeyConvert;
+        decimal TotalPrice;
+        decimal SelectedPrice;
 
         public Form1()
         {
@@ -39,18 +47,26 @@ namespace TestSteamBot
 
         private void updateList(object sender, RunWorkerCompletedEventArgs e)
         {
+            TotalPrice = 0.0m;
             this.lstItems.Items.Clear(); // clear the items in the listbox
             this.lstItems.Columns.Clear(); // clear columns in the listbox
 
             lstItems.Columns.Add("Name"); // add columns
-            lstItems.Columns.Add("Price");
+            lstItems.Columns.Add("Price (ref)");
+            lstItems.Columns.Add("Converted from");
 
             foreach (TFItem x in Items)
             {
-                var item = new ListViewItem(new[] { x.Name, x.Price });
+                var item = new ListViewItem(new[] { x.Name, x.Price, x.From });
                 lstItems.Items.Add(item);
+
+                if (x.Price.Contains("ref"))
+                    x.Price = x.Price.Substring(0, x.Price.IndexOf("ref") - 1);
+
+                TotalPrice += Convert.ToDecimal(x.Price);
             }
 
+            lblTotal.Text = string.Format("Total Cost: {0}.", TotalPrice.ToString());
         }
 
 
@@ -94,18 +110,29 @@ namespace TestSteamBot
 
                         tempName = i.Substring(0, i.IndexOf("(") - 1);
                         tempPrice = i.Substring(i.IndexOf("(") + 1);
-                        tempCurrency = "ref";
 
-                        if (tempName.Contains("Summer"))
+                        if (tempName.Contains("Refined"))
                             Console.WriteLine();
 
                         if (tempPrice.Contains("$"))
                         {
                             tempCurrency = "$";
+                            tempPrice = tempPrice.Substring(1);
                         }
                         else if (tempPrice.ToLower().Contains("key"))
                         {
                             tempCurrency = "keys";
+                            tempPrice = tempPrice.Substring(0, tempPrice.ToLower().IndexOf("keys") - 1);
+                        }
+                        else if (tempPrice.ToLower().Contains("ref"))
+                        {
+                            tempCurrency = "ref";
+                            tempPrice = tempPrice.Substring(0, tempPrice.ToLower().IndexOf("ref") - 1);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cannot find currency type {0} for item {1}. Skipping...", tempPrice, tempName);
+                            break;
                         }
 
 
@@ -157,16 +184,16 @@ namespace TestSteamBot
 
                         /*if (tempPrice.Contains("r"))
                             tempPrice = tempPrice.Substring(0, tempPrice.IndexOf("r")-1);//*/
-                        if (!(tempPrice.Contains("r")) && (tempCurrency == "ref"))
-                            tempPrice += " ref";
 
                         if (tempCurrency == "$")
-                            tempPrice += " (converted from USD)";
+                            tempFrom = "USD";
                         else if (tempCurrency == "keys")
-                            tempPrice += " (converted from Key)";
+                            tempFrom = "keys";
+                        else
+                            tempFrom = "";
 
                         Console.WriteLine("Name \"{0}\", Price: \"{1}\"", tempName, tempPrice);
-                        Items.Add(new TFItem(tempName, tempPrice));
+                        Items.Add(new TFItem(tempName, tempPrice, tempCurrency, tempFrom));
 
                     }
                 }
@@ -217,6 +244,34 @@ namespace TestSteamBot
             {
                 lblInfo.Text = "Ready.";
             }
+        }
+
+        private void lstItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string y;
+            SelectedPrice = 0.0m;
+            foreach (ListViewItem x in lstItems.SelectedItems)
+            {
+                y = x.Text;
+                foreach (var i in Items)
+                {
+                    if (i.Name.Contains(y))
+                    {
+                        if (i.Price.Contains("ref"))
+                            i.Price = i.Price.Substring(0, i.Price.IndexOf("ref") - 1);
+
+                        SelectedPrice += Convert.ToDecimal(i.Price);
+                        break;
+                    }
+                }
+            }
+            Console.WriteLine(SelectedPrice);
+            if (SelectedPrice == 0.0m)
+            {
+                lblTotal.Text = string.Format("Total Cost: {0}.", TotalPrice.ToString(), SelectedPrice.ToString());
+            }
+            else
+                lblTotal.Text = string.Format("Total Cost: {0}. Selected: {1}", TotalPrice.ToString(),SelectedPrice.ToString());
         }
     }
 }

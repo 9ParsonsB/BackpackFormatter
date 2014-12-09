@@ -36,6 +36,7 @@
             this.lblInfo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLoadtxt
@@ -50,6 +51,7 @@
             // 
             // lstItems
             // 
+            this.lstItems.FullRowSelect = true;
             this.lstItems.GridLines = true;
             this.lstItems.Location = new System.Drawing.Point(12, 69);
             this.lstItems.Name = "lstItems";
@@ -57,6 +59,7 @@
             this.lstItems.TabIndex = 5;
             this.lstItems.UseCompatibleStateImageBehavior = false;
             this.lstItems.View = System.Windows.Forms.View.Details;
+            this.lstItems.SelectedIndexChanged += new System.EventHandler(this.lstItems_SelectedIndexChanged);
             // 
             // txtKeyValue
             // 
@@ -100,11 +103,21 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(290, 49);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(58, 13);
+            this.lblTotal.TabIndex = 10;
+            this.lblTotal.Text = "Total Cost:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 550);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblkeyPrice);
@@ -130,6 +143,7 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblTotal;
     }
 }
 
