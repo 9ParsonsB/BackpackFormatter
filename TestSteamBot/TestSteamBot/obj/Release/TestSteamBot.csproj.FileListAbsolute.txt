@@ -1,0 +1,8 @@
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Release\TestSteamBot.exe.config
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Release\TestSteamBot.exe
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\bin\Release\TestSteamBot.pdb
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Release\TestSteamBot.Form1.resources
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Release\TestSteamBot.Properties.Resources.resources
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Release\TestSteamBot.csproj.GenerateResource.Cache
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Release\TestSteamBot.exe
+C:\Users\MinijackB\git\BackpackFormatter\TestSteamBot\TestSteamBot\obj\Release\TestSteamBot.pdb

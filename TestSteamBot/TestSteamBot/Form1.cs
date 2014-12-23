@@ -62,8 +62,14 @@ namespace TestSteamBot
 
                 if (x.Price.Contains("ref"))
                     x.Price = x.Price.Substring(0, x.Price.IndexOf("ref") - 1);
-
-                TotalPrice += Convert.ToDecimal(x.Price);
+                try
+                {
+                    TotalPrice += Convert.ToDecimal(x.Price);
+                }
+                catch (FormatException)
+                {
+                    continue;
+                }
             }
 
             lblTotal.Text = string.Format("Total Cost: {0}.", TotalPrice.ToString());
@@ -79,7 +85,7 @@ namespace TestSteamBot
 
             Console.WriteLine("Loading file!");
 
-            loadNameExp = new Regex(@".* \(");
+            loadNameExp = new Regex(@".* \(.*[0-9]");
             toLoad = new List<string>();
             openFile = new OpenFileDialog();
 
@@ -111,7 +117,7 @@ namespace TestSteamBot
                         tempName = i.Substring(0, i.IndexOf("(") - 1);
                         tempPrice = i.Substring(i.IndexOf("(") + 1);
 
-                        if (tempName.Contains("Refined"))
+                        if (tempName.ToLower().Contains("summer"))
                             Console.WriteLine();
 
                         if (tempPrice.Contains("$"))
@@ -122,7 +128,8 @@ namespace TestSteamBot
                         else if (tempPrice.ToLower().Contains("key"))
                         {
                             tempCurrency = "keys";
-                            tempPrice = tempPrice.Substring(0, tempPrice.ToLower().IndexOf("keys") - 1);
+                            Console.WriteLine("using substring for item {0} at index 0 to {1}",tempName,tempPrice.ToLower().IndexOf("key"));
+                            tempPrice = tempPrice.Substring(0, tempPrice.ToLower().IndexOf("key") - 1);
                         }
                         else if (tempPrice.ToLower().Contains("ref"))
                         {

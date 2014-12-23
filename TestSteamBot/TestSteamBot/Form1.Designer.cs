@@ -128,7 +128,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "TF2 Backpack Formatter";
+            this.Text = "TF2 Backpack Formatter V.1.3";
             this.ResumeLayout(false);
             this.PerformLayout();
 
